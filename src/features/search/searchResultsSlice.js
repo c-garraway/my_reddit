@@ -23,8 +23,8 @@ export const searchResultsSlice = createSlice ({
         },
         [loadSearchResults.fulfilled]: (state, action) => {
             state.results = action.payload
-            state.isLoadingSearchResults = true;
-            state.failedToLoadSearchResults = true;
+            state.isLoadingSearchResults = false;
+            state.failedToLoadSearchResults = false;
         },
         [loadSearchResults.rejected]: (state) => {
             state.isLoadingSearchResults = false;
