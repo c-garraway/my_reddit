@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import { loadSearchResults } from '../../features/search/searchResultsSlice'
 import { useDispatch } from 'react-redux'
+import { addSearchTerm, resetSearchTerm } from '../../features/search/searchTermSlice'
+import { resetPosts } from '../../features/post/postsSlice'
 
 function SearchBar() {
 
@@ -9,11 +11,16 @@ function SearchBar() {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(loadSearchResults(userInput))
+    dispatch(resetPosts());
+    dispatch(resetSearchTerm());
+    dispatch(loadSearchResults(userInput));
+    dispatch(addSearchTerm(userInput));
   }
 
   return (
+    
     <div className="searchBar">
+      
       <input
         value={userInput}
         onChange={(e) => setUserInput(e.currentTarget.value)} 

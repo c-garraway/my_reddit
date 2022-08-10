@@ -11,13 +11,17 @@
   background-color: white;
   margin: auto;
   margin-top: 8px;
-  width: 95%;
-  height: 150px;
+  width: 91%;
+  /* height: 150px; */
   border-radius: 5px;
-
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  padding: 10px;
 }
 
 body {
+  font-family: Arial, Helvetica, sans-serif;
   width: 700px;
   margin: auto;
   box-sizing: border-box;
@@ -85,3 +89,20 @@ body {
   width: 50%;
   justify-content: space-between;
 }
+
+.searchResultsTitle{
+  color: white;
+}
+.postTitle{
+  
+  font-size: 16px;
+  font-weight: bold;
+}
+/* .imageContainer{
+ 
+}
+.thumbnailImg {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+} */
