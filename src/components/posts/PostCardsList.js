@@ -23,10 +23,14 @@ function PostCardsList() {
           
           dispatch(addPost({
             id: uuidv4(),
-            subreddit: results.data.children[item].data.subreddit,
+            subreddit: results.data.children[item].data.subreddit_name_prefixed,
             title: results.data.children[item].data.title,
             thumbnail: results.data.children[item].data.thumbnail,
-            comments: results.data.children[item].data.num_comments
+            comments: results.data.children[item].data.num_comments,
+            author: results.data.children[item].data.author,
+            upVotes: results.data.children[item].data.ups,
+            author_flair_text: results.data.children[item].data.author_flair_text,
+            permalink: results.data.children[item].data.permalink
           }))
         }
       }
@@ -46,15 +50,18 @@ function PostCardsList() {
       <p className='searchResultsTitle'>Search Results for... {searchTerm}</p>
       {allPosts.map((post) => {
         return(
-            <div >
-            <PostCard 
-            key={post.id}
-            id={post.id}
-            subreddit={post.subreddit}
-            thumbnail={post.thumbnail}
-            title={post.title}
-            comments={post.comments}
-            />
+            <div key={post.id}>
+              <PostCard 
+              id={post.id}
+              subreddit={post.subreddit}
+              thumbnail={post.thumbnail}
+              title={post.title}
+              comments={post.comments}
+              author={post.author}
+              upVotes={post.upVotes}
+              author_flair_text={post.author_flair_text}
+              permalink={post.permalink}
+              />
           </div>
         )
         

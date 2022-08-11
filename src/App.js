@@ -10,9 +10,11 @@ function App() {
     <div className="App">
       <Header />
       <div className="main">
-        <div className="search">
-          <SearchButtons />
-          <SearchBar />
+        <div >
+          <div className="search">
+            <SearchButtons />
+            <SearchBar />
+          </div>
         </div>    
         <PostCardsList />
       </div>

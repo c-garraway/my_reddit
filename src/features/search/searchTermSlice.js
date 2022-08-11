@@ -1,15 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const initialState = () => {
+    return [];
+}
+
 export const searchTermSlice = createSlice({
     name: 'searchTerm',
-    initialState: [],
+    initialState: initialState(),
     reducers: {
         addSearchTerm: (state, action) => {
             state.push(action.payload)
         },
-        resetSearchTerm: (state) => {
-            state.pop();
-        }
+        resetSearchTerm: () => initialState()
     }
 });
 

@@ -13,14 +13,12 @@ function SearchBar() {
   const handleClick = () => {
     dispatch(resetPosts());
     dispatch(resetSearchTerm());
-    dispatch(loadSearchResults(userInput));
     dispatch(addSearchTerm(userInput));
+    dispatch(loadSearchResults(userInput));
   }
 
   return (
-    
     <div className="searchBar">
-      
       <input
         value={userInput}
         onChange={(e) => setUserInput(e.currentTarget.value)} 
