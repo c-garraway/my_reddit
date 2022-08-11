@@ -42,19 +42,24 @@ body {
 .main {
   background-color: #004aad;
   padding-bottom: 15px;
+  margin-block-start: 63px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   padding-top: 5px;
-  /* padding-bottom: 0px; */
+  
   padding-left: 15px;
   padding-right: 15px;
   background-color: white;
   text-align: left;
+  position: fixed;
+  top: 0;
   
+  width: 80%;
 }
+
 .headerAlign {
   display: flex;
 }

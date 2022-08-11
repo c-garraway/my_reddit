@@ -3,7 +3,7 @@ import PostCard from './PostCard'
 import { selectSearchResults } from '../../features/search/searchResultsSlice'
 import { selectSearchTerm } from '../../features/search/searchTermSlice'
 import { useSelector, useDispatch  } from 'react-redux'
-import { addPost, selectPosts, resetPosts } from '../../features/post/postsSlice'
+import { addPost, selectPosts } from '../../features/post/postsSlice'
 import { v4 as uuidv4 } from 'uuid'
 
 

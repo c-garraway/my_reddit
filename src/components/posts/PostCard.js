@@ -1,8 +1,16 @@
 import React from 'react'
+import { loadCurrentComments } from '../../features/comments/commentsSlice'
+import { useDispatch } from 'react-redux'
 
 function PostCard({subreddit, thumbnail, title, comments, author, upVotes, author_flair_text, permalink}) {
+  
+  const dispatch = useDispatch();
+  const postLink = `https://www.reddit.com/${permalink}`
+  
+  const handleClick = () => {
+    dispatch(loadCurrentComments(postLink))
+  }
 
-  const redditHtml = 'https://www.reddit.com/'
   return (
     <div className='postCard'>
       <div className='textContainer'>
@@ -13,16 +21,16 @@ function PostCard({subreddit, thumbnail, title, comments, author, upVotes, autho
         
         <div className='postBody'>
           <p className='postTitle'>{title}</p>
-          <a className='postLink' href={`${redditHtml}${permalink}` }target="_blank">post link</a>
+          <a className='postLink' href={postLink}target="_blank" rel="noreferrer">post link</a>
         </div>
         <br/>
         <div className='postFooter'>
           <p>{upVotes} upvotes</p>
-          <p id='comments'>{comments} comments</p>
+          <button id='comments' onClick={handleClick}>{comments} comments</button>
         </div>
       </div>
       <div className='imageContainer'>
-        <img className='thumbnailImg' src={thumbnail} alt='no image available'/>
+        <img className='thumbnailImg' src={thumbnail} alt='none available'/>
       </div>
     </div>
   )

@@ -15,6 +15,7 @@ function SearchBar() {
     dispatch(resetSearchTerm());
     dispatch(addSearchTerm(userInput));
     dispatch(loadSearchResults(userInput));
+    setUserInput('')
   }
 
   return (
