@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { addSearchTerm, resetSearchTerm } from '../../features/search/searchTermSlice'
 import { useDispatch } from 'react-redux'
 import { loadSearchResults } from '../../features/search/searchResultsSlice'
@@ -7,6 +7,15 @@ import { resetPosts } from '../../features/post/postsSlice';
 function SearchButtons() {
 
   const dispatch = useDispatch();
+  const starterSearch = 'Technology News';
+
+  useEffect(() => {
+    dispatch(resetSearchTerm());
+    dispatch(resetPosts());
+    dispatch(loadSearchResults(starterSearch));
+    dispatch(addSearchTerm(starterSearch))
+  })
+  
 
   const handleClick = (e) => {
     dispatch(resetSearchTerm());

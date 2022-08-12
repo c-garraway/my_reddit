@@ -5,7 +5,9 @@ import { useDispatch } from 'react-redux'
 function PostCard({subreddit, thumbnail, title, comments, author, upVotes, author_flair_text, permalink}) {
   
   const dispatch = useDispatch();
-  const postLink = `https://www.reddit.com/${permalink}`
+  const postLink = `https://www.reddit.com/${permalink}`;
+
+ 
   
   const handleClick = () => {
     dispatch(loadCurrentComments(postLink))
@@ -30,7 +32,7 @@ function PostCard({subreddit, thumbnail, title, comments, author, upVotes, autho
         </div>
       </div>
       <div className='imageContainer'>
-        <img className='thumbnailImg' src={thumbnail} alt='none available'/>
+        <img className='thumbnailImg' src={thumbnail} alt=''/>
       </div>
     </div>
   )

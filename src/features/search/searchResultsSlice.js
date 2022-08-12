@@ -12,7 +12,11 @@ export const loadSearchResults = createAsyncThunk(
 export const searchResultsSlice = createSlice ({
     name: 'searchResults',
     initialState: {
-        results: {},
+        results: {
+            data: {
+                children: []
+            }
+        },
         isLoadingSearchResults: false,
         failedToLoadSearchResults: false,
     },
