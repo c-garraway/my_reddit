@@ -12,13 +12,10 @@
   margin: auto;
   margin-top: 8px;
   width: 92%;
-  /* height: 150px; */
   border-radius: 5px;
   display: flex;
-  
   text-align: left;
   padding: 10px;
-
 }
 
 body {
@@ -37,8 +34,6 @@ body {
   cursor: pointer;
 }
 
-
-
 .main {
   background-color: #004aad;
   padding-bottom: 15px;
@@ -49,7 +44,6 @@ body {
   display: flex;
   justify-content: space-between;
   padding-top: 5px;
- 
   padding-left: 15px;
   padding-right: 15px;
   background-color: white;
@@ -57,46 +51,49 @@ body {
   position: fixed;
   top: 0;
   width: 670px;
-  
 }
 
 .headerAlign {
   display: flex;
 }
+
 .title {
   margin: 0px 5px;
   font-family: 'Open Sans', sans-serif;
 }
+
 #redditIcon {
   margin-top: 5px;
 }
+
 .search {
-  /* padding: 20px; */
   display: flex;
   width: 95%;
   margin: auto;
   padding: 20px 10px;
   justify-content:space-between;
-  
 }
+
 .searchBar {
   background-color: white;
   height: 50px;
   width: 48%;
   display: flex;
   border-radius: 5px;
-  
 }
+
 .searchBar input {
   height: 24px;
   width: 200px;
   margin: auto;
 }
+
 .searchBar button {
   height: 30px;
   margin: auto;
   cursor: pointer;
 }
+
 .searchButtons {
   display: flex;
   width: 50%;
@@ -107,42 +104,86 @@ body {
   color: white;
   padding-bottom: 10px;
 }
+
 .postTitle{
   
   font-size: 16px;
   font-weight: bold;
 }
+
 .textContainer{
-  
   width: 75%;
   padding: 5px;
   display:inline-block;
   align-content: space-between;
 }
+
 .postHeader{
   display: flex;
-  font-size: small;
+  font-size:medium;
   color: gray;
 }
+
 .postFooter{
   display: flex;
-  font-size: x-small;
+  font-size: medium;
   color: gray;
 }
+
 #comments{
   margin-left: 10px;
 }
+
 .postLink{
   font-size: small;
-  
 }
-/*  .imageContainer{
- 
- 
-} */
-/*
-.thumbnailImg {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-} */
+
+@media only screen and (max-width: 580px) {
+  body {
+    width: 400px;
+  }
+
+  .search{
+    display:block;
+
+  }
+
+  .postCard{
+    display: block;
+  }
+  
+  .textContainer{
+    width: 100%;
+    padding: 5px;
+    display:inline-block;
+    align-content: space-between;
+  }
+  
+  .imageContainer{
+    width: 100%;
+  
+  }
+  .thumbnailImg{
+    width: 100%;
+  }
+  .searchButtons{
+    width: 100%;
+    
+  }
+  .searchBar{
+    width: 100%;
+    margin-top: 15px;
+  }
+  .searchButtons button {
+    width: 31%;
+    font-size:large;
+  }
+
+  .searchBar input {
+    width: 70%;
+  }
+  
+  .header {
+    width: 90%;  
+  }
+}

@@ -32,7 +32,7 @@ function SearchButtons() {
       >Formula 1</button>
 
       <button
-        value='Raptors'
+        value='Toronto Raptors'
         onClick={handleClick}
       >Raptors</button>
       <button

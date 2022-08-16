@@ -28,7 +28,7 @@ function PostCard({subreddit, thumbnail, title, comments, author, upVotes, autho
         <br/>
         <div className='postFooter'>
           <p>{upVotes} upvotes</p>
-          <button id='comments' onClick={handleClick}>{comments} comments</button>
+          <p id='comments'>{comments} comments</p>
         </div>
       </div>
       <div className='imageContainer'>
