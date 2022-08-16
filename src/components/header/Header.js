@@ -7,7 +7,7 @@ function Header() {
     <div className="header">
         
             <div className="headerAlign">
-                <a href='#'><img src={Home} alt="Home Icon" width="50" height="50" /></a>
+                <img src={Home} alt="Home Icon" width="50" height="50" />
                 <h1 className="title">my_reddit</h1>
             </div>
             <div id="redditIcon">

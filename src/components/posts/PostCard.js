@@ -1,17 +1,8 @@
 import React from 'react'
-import { loadCurrentComments } from '../../features/comments/commentsSlice'
-import { useDispatch } from 'react-redux'
 
 function PostCard({subreddit, thumbnail, title, comments, author, upVotes, author_flair_text, permalink}) {
-  
-  const dispatch = useDispatch();
+   
   const postLink = `https://www.reddit.com/${permalink}`;
-
- 
-  
-  const handleClick = () => {
-    dispatch(loadCurrentComments(postLink))
-  }
 
   return (
     <div className='postCard'>
