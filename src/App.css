@@ -2,6 +2,7 @@
 * {
   /* border: 1px solid black; */
   margin: 0;
+  box-sizing: border-box;
 }
 
 .App {
@@ -22,7 +23,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   width: 700px;
   margin: auto;
-  box-sizing: border-box;
 }
 
 .searchButtons button {
@@ -37,33 +37,35 @@ body {
 .main {
   background-color: #004aad;
   padding-bottom: 15px;
-  margin-block-start: 63px;
+  margin-block-start: 55px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  padding-top: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
   background-color: white;
   text-align: left;
   position: fixed;
   top: 0;
-  width: 670px;
+  width: 700px;
+  z-index: 100;
 }
 
 .headerAlign {
   display: flex;
+  align-items: center;
+  margin-left: 20px;
 }
 
 .title {
-  margin: 0px 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
   font-family: 'Open Sans', sans-serif;
 }
 
 #redditIcon {
   margin-top: 5px;
+  margin-right: 20px;
 }
 
 .search {
@@ -83,7 +85,7 @@ body {
 }
 
 .searchBar input {
-  height: 24px;
+  height: 30px;
   width: 200px;
   margin: auto;
 }
@@ -106,7 +108,7 @@ body {
 }
 
 .postTitle{
-  
+  margin-bottom: 5px;
   font-size: 16px;
   font-weight: bold;
 }
@@ -132,24 +134,43 @@ body {
 
 #comments{
   margin-left: 10px;
+  
 }
 
 .postLink{
   font-size: small;
+  border-radius: 5px;
+  padding: 4px 8px;
+  background-color: lightblue;
+  color: white;
+}
+.postLink:link{
+  text-decoration: none;
+}
+
+.fadeInPost{
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn{
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 @media only screen and (max-width: 580px) {
   body {
-    width: 400px;
+    width: 100%;
   }
 
   .search{
     display:block;
-
   }
 
   .postCard{
     display: block;
+  }
+  .postLink{
+    font-size: medium;
   }
   
   .textContainer{
@@ -184,6 +205,11 @@ body {
   }
   
   .header {
-    width: 90%;  
+
+    width: 100%;
+  }
+  #redditIcon {
+    position: fixed;
+    left:360px;
   }
 }

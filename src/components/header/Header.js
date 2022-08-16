@@ -6,13 +6,13 @@ function Header() {
   return (
     <div className="header">
         
-            <div className="headerAlign">
-                <img src={Home} alt="Home Icon" width="50" height="50" />
-                <h1 className="title">my_reddit</h1>
-            </div>
-            <div id="redditIcon">
-            <a href='https://www.reddit.com/' target='_blank' rel="noreferrer"><img src={RedditIcon} alt="Reddit Icon" height="45"/></a>
-        </div>
+      <div className="headerAlign">
+          <img src={Home} alt="Home Icon" width="42" height="42" />
+          <h1 className="title">my_reddit</h1>
+      </div>
+      <div id="redditIcon">
+        <a href='https://www.reddit.com/' target='_blank' rel="noreferrer"><img src={RedditIcon} alt="Reddit Icon" height="45"/></a>
+      </div>
         
     </div>
   )

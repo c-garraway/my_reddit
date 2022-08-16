@@ -17,6 +17,8 @@ Created using Canva.
 
 
 ### Future Work:
+- Animations
+- Add loading indicator
 - Comments functionality
 
 ### Technologies Used:

@@ -49,7 +49,7 @@ function PostCardsList() {
       <p className='searchResultsTitle'>Search Results for... {searchTerm}</p>
       {allPosts.map((post) => {
         return(
-            <div key={post.id}>
+            <div className='fadeInPost' key={post.id}>
               <PostCard 
               id={post.id}
               subreddit={post.subreddit}

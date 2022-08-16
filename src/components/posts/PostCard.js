@@ -14,7 +14,7 @@ function PostCard({subreddit, thumbnail, title, comments, author, upVotes, autho
         
         <div className='postBody'>
           <p className='postTitle'>{title}</p>
-          <a className='postLink' href={postLink}target="_blank" rel="noreferrer">post link</a>
+          <a className='postLink' href={postLink}target="_blank" rel="noreferrer">Post Link</a>
         </div>
         <br/>
         <div className='postFooter'>
