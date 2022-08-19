@@ -32,7 +32,7 @@ function PostCard({subreddit, thumbnail, title, comments, author, upVotes, autho
         </div>
       </div>
       <div className='imageContainer'>
-        <img className='thumbnailImg' src={checkedThumbnail()} alt=''/>
+        <img className='thumbnailImg' src={checkedThumbnail()} alt='' width="140"/>
       </div>
     </div>
   )
