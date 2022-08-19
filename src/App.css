@@ -32,6 +32,8 @@ body {
   border-radius: 5px;
   border: 0px;
   cursor: pointer;
+  font-size: 15px;
+  color: black;
 }
 
 .main {
@@ -94,6 +96,8 @@ body {
   height: 30px;
   margin: auto;
   cursor: pointer;
+  color: black;
+  
 }
 
 .searchButtons {
@@ -118,6 +122,10 @@ body {
   padding: 5px;
   display:inline-block;
   align-content: space-between;
+}
+.imageContainer{
+  width: 140px;
+
 }
 
 .postHeader{
@@ -168,17 +176,9 @@ body {
     display:inline-block;
     align-content: space-between;
   }
-  
-  .imageContainer{
-    width: 100%;
-  
-  }
-  .thumbnailImg{
-    width: 100%;
-  }
+
   .searchButtons{
     width: 100%;
-    
   }
   .searchBar{
     width: 100%;
@@ -194,11 +194,11 @@ body {
   }
   
   .header {
-
     width: 100%;
   }
   #redditIcon {
     position: fixed;
     left:360px;
+    
   }
 }

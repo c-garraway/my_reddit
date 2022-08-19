@@ -11,7 +11,7 @@ function Header() {
           <h1 className="title">my_reddit</h1>
       </div>
       <div id="redditIcon">
-        <a href='https://www.reddit.com/' target='_blank' rel="noreferrer"><img src={RedditIcon} alt="Reddit Icon" height="45"/></a>
+        <a href='https://www.reddit.com/' target='_blank' rel="noreferrer" height="42"><img src={RedditIcon} alt="Reddit Icon" height="42"/></a>
       </div>
         
     </div>
