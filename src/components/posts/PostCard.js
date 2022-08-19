@@ -13,9 +13,6 @@ function PostCard({subreddit, thumbnail, title, comments, author, upVotes, autho
     
   }
 
-  console.log(`checked: ${checkedThumbnail()}`)
-  console.log(`original: ${thumbnail}`)
-
   return (
     <div className='postCard'>
       <div className='textContainer'>
