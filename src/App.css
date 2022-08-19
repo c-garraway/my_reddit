@@ -123,13 +123,11 @@ body {
 .postHeader{
   display: flex;
   font-size:medium;
-  color: gray;
 }
 
 .postFooter{
   display: flex;
   font-size: medium;
-  color: gray;
 }
 
 #comments{
@@ -142,20 +140,11 @@ body {
   border-radius: 5px;
   padding: 4px 8px;
   background-color: lightblue;
-  color: white;
+  color: black;
 }
 .postLink:link{
   text-decoration: none;
 }
-
-/* .fadeInPost{
-  animation: fadeIn 3s;
-}
-
-@keyframes fadeIn{
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-} */
 
 @media only screen and (max-width: 580px) {
   body {
