@@ -4,6 +4,15 @@ function PostCard({subreddit, thumbnail, title, comments, author, upVotes, autho
    
   const postLink = `https://www.reddit.com/${permalink}`;
 
+  const checkedThumbnail = () => {
+    if (thumbnail === 'self' || thumbnail === 'default') {
+      return "";
+    } else {
+      return thumbnail;
+    }
+    
+  }
+
   return (
     <div className='postCard'>
       <div className='textContainer'>
@@ -23,7 +32,7 @@ function PostCard({subreddit, thumbnail, title, comments, author, upVotes, autho
         </div>
       </div>
       <div className='imageContainer'>
-        <img className='thumbnailImg' src={thumbnail} alt=''/>
+        <img className='thumbnailImg' src={checkedThumbnail()} alt=''/>
       </div>
     </div>
   )
